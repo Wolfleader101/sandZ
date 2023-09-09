@@ -1,0 +1,29 @@
+@using Sandbox;
+@using Sandbox.UI;
+
+@namespace MyGame
+@inherits Panel
+@attribute [StyleSheet]
+
+<root>
+    <label>@GetHealth()</label>
+</root>
+
+@code
+{
+    private float GetHealth()
+    {
+        var player = Game.LocalPawn as Pawn;
+        if(player == null) return 0.0f;
+
+
+        return player.Health;
+    }
+
+    protected override int BuildHash()
+    {
+        var currentHealth = GetHealth();
+
+        return currentHealth.GetHashCode();
+    }
+}

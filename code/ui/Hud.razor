@@ -1,0 +1,30 @@
+@using Sandbox;
+@using Sandbox.UI;
+
+@namespace MyGame
+@inherits RootPanel
+@attribute [StyleSheet]
+
+<root>
+    <ChatBox/>
+    <VoiceList/>
+
+    <div class="header">
+        <label>@GetName()</label>
+        <HealthBar />
+    </div>
+</root>
+
+@code
+{
+    private string GetName()
+    {
+        var client = Game.LocalClient;
+        if (client == null) return "";
+
+      
+
+
+        return client.Name;
+    }
+}
