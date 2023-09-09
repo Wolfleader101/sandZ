@@ -81,6 +81,11 @@ public partial class Weapon : AnimatedEntity
 	{
 		Animate();
 
+		if(Input.Pressed("reload"))
+		{
+			CurrentAmmo = MaxAmmo;
+		}
+
 		if ( CanPrimaryAttack() )
 		{
 			using ( LagCompensation() )
