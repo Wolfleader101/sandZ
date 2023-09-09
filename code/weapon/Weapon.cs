@@ -25,6 +25,7 @@ public partial class Weapon : AnimatedEntity
 
 	public virtual int MaxAmmo => 15;
 
+	[Net, Predicted]
 	public int CurrentAmmo  {get; private set;}
 
 

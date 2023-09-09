@@ -2,7 +2,7 @@
   "Title": "s\u0026z",
   "Type": "game",
   "Org": "local",
-  "Ident": "sandZ",
+  "Ident": "sand_z",
   "Tags": null,
   "Schema": 1,
   "HasAssets": true,
@@ -30,6 +30,7 @@
     "HttpAllowList": null,
     "SavedGames": true,
     "MapDependentSaves": false,
-    "SaveFormatVersion": 1001
+    "SaveFormatVersion": 1001,
+    "TickRate": 50
   }
 }

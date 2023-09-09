@@ -6,24 +6,23 @@
 @attribute [StyleSheet]
 
 <root>
-    <label>Health: @GetHealth()</label>
+    <label>Ammo: @GetAmmo()</label>
 </root>
 
 @code
 {
-    private float GetHealth()
+    private int GetAmmo()
     {
         var player = Game.LocalPawn as Pawn;
-        if(player == null) return 0.0f;
+        if(player == null) return 0;
 
-
-        return player.Health;
+        return player.ActiveWeapon.CurrentAmmo;
     }
 
     protected override int BuildHash()
     {
-        var currentHealth = GetHealth();
+        var currentAmmo = GetAmmo();
 
-        return currentHealth.GetHashCode();
+        return currentAmmo.GetHashCode();
     }
 }

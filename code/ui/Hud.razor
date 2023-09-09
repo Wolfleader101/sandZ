@@ -6,12 +6,13 @@
 @attribute [StyleSheet]
 
 <root>
-    <ChatBox/>
-    <VoiceList/>
+    <ChatBox />
+    <VoiceList />
 
     <div class="header">
         <label>@GetName()</label>
         <HealthBar />
+        <AmmoBar />
     </div>
 </root>
 
@@ -21,9 +22,6 @@
     {
         var client = Game.LocalClient;
         if (client == null) return "";
-
-      
-
 
         return client.Name;
     }
